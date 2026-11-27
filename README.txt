@@ -1,19 +1,14 @@
-FOOTPRO V0.1.3 — MENU PRINCIPAL FUNCIONAL (MOBILE)
+FOOTPRO V0.1.4 — CRIAÇÃO DE CARREIRA (MOBILE)
 
-Substitua os três arquivos na raiz do repositório GitHub:
-- index.html
-- app.js
-- style.css
+Nova funcionalidade de Nova Carreira:
+- Cadastro do treinador: nome, idade, nacionalidade, licença e experiência.
+- Escolha de dificuldade e formação inicial.
+- Filtro por país e seleção de clube.
+- Cartão de detalhes do clube selecionado (liga, estádio, capacidade, orçamento e força).
+- Validação dos dados antes de iniciar.
+- Confirmação antes de substituir uma carreira já salva.
+- Início na pré-temporada 2026, com informações do treinador e do projeto salvas.
 
-Funções do menu:
-- Nova carreira: abre configuração de treinador e seleção de clube.
-- Carregar carreira: recupera o último salvamento local deste navegador.
-- Editar banco de dados: permite editar nome, país, força e orçamento dos clubes, salvando localmente.
-- Configurações: preferências de animação e confirmações.
-- Sair: mostra a tela de saída; o navegador não permite fechar a aba automaticamente.
+Os dados do universo ainda são demonstrativos e limitados aos clubes incluídos no banco desta versão. O salvamento é local ao navegador/dispositivo.
 
-Os demais sistemas existentes na versão anterior foram preservados. Dados demonstrativos; salvamentos locais ao dispositivo/navegador.
-
-
-IMPORTANTE PARA PUBLICAR NO GITHUB PAGES:
-Extraia o ZIP e envie os 4 arquivos diretamente para a raiz do repositório (não envie a pasta FootPRO_mobile_V0.1.3 como uma subpasta). Os arquivos index.html, app.js e style.css devem ficar lado a lado. Depois aguarde a publicação e atualize o navegador.
+PUBLICAÇÃO: extraia o ZIP e envie index.html, app.js, style.css e README.txt diretamente para a raiz do repositório GitHub Pages, substituindo os arquivos antigos. Mantenha os três arquivos principais juntos. Depois, atualize a página no Chrome.
