@@ -4,8 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="theme-color" content="#090b0e">
-  <title>FootPRO V0.1</title>
-  <link rel="stylesheet" href="style.css?v=0.1.1">
+  <meta name="mobile-web-app-capable" content="yes">
+  <title>FootPRO V0.1.1</title>
+  <link rel="stylesheet" href="style.css?v=011">
 </head>
 <body>
   <div id="app">
@@ -15,28 +16,26 @@
     </header>
     <main id="screen">
       <div class="welcome">
-        <div class="hero">
-          <div>
-            <div class="eyebrow">GLOBAL FOOTBALL MANAGEMENT SIMULATOR · V0.1</div>
-            <h1>FOOT<span class="silver">PRO</span></h1>
-            <p>Construa sua trajetória. Assuma qualquer clube, monte seu projeto esportivo e escreva a história do futebol.</p>
-            <div class="hero-actions">
-              <button class="btn primary" id="newBtn" type="button">NOVA CARREIRA</button>
-              <button class="btn" id="loadBtn" type="button">CARREGAR CARREIRA</button>
-              <button class="btn" id="dbBtn" type="button">EDITOR DE BANCO</button>
-            </div>
+        <section class="hero">
+          <div class="eyebrow">GLOBAL FOOTBALL MANAGEMENT SIMULATOR</div>
+          <h1>FOOT<span class="silver">PRO</span></h1>
+          <p>Construa sua trajetória. Assuma um clube, monte seu projeto esportivo e escreva a história do futebol.</p>
+          <div class="hero-actions">
+            <button class="btn primary" type="button" onclick="location.reload()">NOVA CARREIRA</button>
+            <button class="btn" type="button" onclick="location.reload()">CARREGAR CARREIRA</button>
+            <button class="btn" type="button" onclick="location.reload()">EDITOR DE BANCO</button>
           </div>
-          <span class="tag">BUILD 0.1 · OFFLINE</span>
-        </div>
+          <span class="tag">BUILD 0.1.1 · OFFLINE</span>
+        </section>
         <div class="grid">
-          <section class="card span-6"><h3>UNIVERSO DO FUTEBOL</h3><p class="muted">Clubes, ligas, calendário, elenco, transferências e simulação de partidas.</p></section>
-          <section class="card span-6"><h3>CARREIRA DE TREINADOR</h3><p class="muted">Assuma o comando, defina sua filosofia e construa sua reputação temporada após temporada.</p></section>
+          <section class="card span-6"><h3>UNIVERSO DO FUTEBOL</h3><p class="muted">Clubes, ligas, calendário, elenco, transferências e partidas.</p></section>
+          <section class="card span-6"><h3>CARREIRA DE TREINADOR</h3><p class="muted">Assuma o comando, defina sua filosofia e construa sua reputação.</p></section>
         </div>
       </div>
     </main>
     <div id="toast" role="status"></div>
     <div id="modalRoot"></div>
   </div>
-  <script src="app.js?v=0.1.1"></script>
+  <script src="app.js?v=011"></script>
 </body>
 </html>

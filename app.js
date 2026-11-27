@@ -90,4 +90,19 @@ function playMatch(){let f=state.fixtures.find(x=>!x.played);if(!f){toast('Não 
 function updateTable(t,gf,ga){if(!t)return;t.pj++;t.gp+=gf;t.gc+=ga;if(gf>ga){t.v++;t.pts+=3}else if(gf===ga){t.e++;t.pts++}else t.d++;}
 function advanceWeek(){state.week++;state.squad.forEach(p=>{p.fitness=Math.min(100,p.fitness+(state.training==='Recuperação'?14:7));if(p.age<24&&p.ov<p.pot&&state.training!=='Recuperação'&&Math.random()<.18)p.ov++;if(p.injured){p.injured--;}});state.cash-=state.squad.reduce((a,p)=>a+p.wage,0);state.weather=['Chuva','Sol','Nublado','Vento','Frio'][rand(0,4)];if(state.week%4===0){state.manager.reputation+=1;state.sponsors.forEach(s=>s.years=Math.max(0,s.years-0.08));}if(state.week>=18){state.history.push({text:`Temporada ${state.season}/${state.season+1} encerrada`,week:state.week});state.season++;state.week=0;state.played=state.wins=state.draws=state.losses=state.points=state.gf=state.ga=0;generateLeague();makeFixtures();pushNews('Nova temporada iniciada','O elenco retorna para a pré-temporada.');}else pushNews('Semana avançada','Treinamento concluído. Condição física e agenda atualizadas.');save();toast('Semana avançada.');render();}
 function download(name,data,type){let blob=new Blob([data],{type}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download=name;a.click();URL.revokeObjectURL(url);}
-renderHome();
+
+window.addEventListener('error', function (event) {
+  const root = document.getElementById('screen');
+  if (root && !root.innerHTML.trim()) {
+    root.innerHTML = '<section class="card" style="margin:18px auto;max-width:640px"><h2>Não foi possível iniciar o FootPRO</h2><p class="muted">O navegador encontrou um erro ao carregar o jogo. Recarregue a página. Se persistir, envie esta mensagem ao suporte: ' +
+      String(event.message || 'erro de inicialização').replace(/[&<>]/g, '') + '</p><button class="btn primary" onclick="location.reload()">TENTAR NOVAMENTE</button></section>';
+  }
+});
+try {
+  renderHome();
+} catch (error) {
+  const root = document.getElementById('screen');
+  if (root) root.innerHTML = '<section class="card" style="margin:18px auto;max-width:640px"><h2>Falha ao iniciar o FootPRO</h2><p class="muted">Erro: ' +
+    String(error && error.message || error).replace(/[&<>]/g, '') + '</p><button class="btn primary" onclick="location.reload()">TENTAR NOVAMENTE</button></section>';
+  console.error('FootPRO startup:', error);
+}
