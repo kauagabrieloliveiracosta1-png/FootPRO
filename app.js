@@ -46,7 +46,7 @@ function renderHome(){
  <button class="btn" id="dbBtn">EDITAR BANCO DE DADOS</button>
  <button class="btn" id="settingsBtn">CONFIGURAÇÕES</button>
  <button class="btn danger" id="exitBtn">SAIR</button>
- </div><span class="tag">BUILD 0.1.2 · MOBILE</span></section>
+ </div><span class="tag">BUILD 0.1.3 · MOBILE</span></section>
  <div class="grid">${card('UNIVERSO DO FUTEBOL',`<p class="muted">Clubes, ligas, calendário, elenco, transferências e partidas.</p>`,'span-6')}${card('CARREIRA DE TREINADOR',`<p class="muted">Gerencie o clube e construa sua reputação temporada após temporada.</p>`,'span-6')}</div>
  <div class="copyright">FOOTPRO V0.1.2 · SALVAMENTO LOCAL NESTE NAVEGADOR</div></div>`;
  $('#newBtn').onclick=()=>{selectedClub=null;selectedCountry='Todos';renderSetup(false)};
