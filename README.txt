@@ -1,14 +1,15 @@
-FOOTPRO V0.1.1 — FOCO EM NAVEGADOR DE CELULAR
+FOOTPRO V0.1.2 — MENU PRINCIPAL FUNCIONAL (MOBILE)
 
-PUBLICAÇÃO:
-1. Extraia este ZIP.
-2. Abra a pasta FootPRO_mobile_V0.1.1.
-3. Substitua no repositório os três arquivos da raiz: index.html, app.js e style.css.
-4. Faça commit dos três arquivos.
-5. Abra o GitHub Pages no Chrome do celular e atualize a página.
+Substitua os três arquivos na raiz do repositório GitHub:
+- index.html
+- app.js
+- style.css
 
-IMPORTANTE:
-- Os três arquivos precisam ficar juntos na raiz do repositório.
-- Esta atualização preserva os sistemas existentes e ajusta a interface para celular.
-- O menu inicial agora tem conteúdo estático de segurança e o JavaScript mostra uma mensagem de erro se falhar ao iniciar.
-- Os dados do jogo continuam sendo demonstrativos e o salvamento é local ao navegador/dispositivo.
+Funções do menu:
+- Nova carreira: abre configuração de treinador e seleção de clube.
+- Carregar carreira: recupera o último salvamento local deste navegador.
+- Editar banco de dados: permite editar nome, país, força e orçamento dos clubes, salvando localmente.
+- Configurações: preferências de animação e confirmações.
+- Sair: mostra a tela de saída; o navegador não permite fechar a aba automaticamente.
+
+Os demais sistemas existentes na versão anterior foram preservados. Dados demonstrativos; salvamentos locais ao dispositivo/navegador.
